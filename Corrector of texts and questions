@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مُحسّن النصوص الذكي</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; padding: 20px; display: flex; justify-content: center; min-height: 100vh; }
+        .container { width: 100%; max-width: 600px; background: #1e293b; padding: 24px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); height: fit-content; }
+        h1 { font-size: 1.5rem; margin-bottom: 8px; color: #38bdf8; text-align: center; }
+        p.subtitle { font-size: 0.9rem; color: #94a3b8; text-align: center; margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #cbd5e1; }
+        textarea { width: 100%; height: 120px; background: #0f172a; border: 1px solid #334155; color: #fff; padding: 12px; border-radius: 8px; font-size: 1rem; resize: none; margin-bottom: 16px; }
+        textarea:focus { outline: none; border-color: #38bdf8; }
+        .tones { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 16px; }
+        .tone-btn { background: #334155; border: none; color: #cbd5e1; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: 0.2s; }
+        .tone-btn.active { background: #38bdf8; color: #0f172a; font-weight: bold; }
+        button.submit { width: 100%; background: #0284c7; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        button.submit:hover { background: #0369a1; }
+        .results { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+        .result-card { background: #0f172a; border: 1px solid #334155; padding: 14px; border-radius: 8px; position: relative; }
+        .result-card p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px; color: #e2e8f0; }
+        .copy-btn { background: #334155; color: #38bdf8; border: none; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+        .copy-btn:hover { background: #475569; }
+        .loading { text-align: center; color: #38bdf8; margin-top: 15px; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>مُحسّن النصوص الذكي</h1>
+    <p class="subtitle">اكتب نصك، اختر النبرة، ودع الذكاء الاصطناعي يصيغه باحترافية</p>
+
+    <label for="userInput">أدخل النص أو الفكرة هنا:</label>
+    <textarea id="userInput" placeholder="اكتب نصك بأسلوب بسيط أو عامي..."></textarea>
+
+    <label>اختر النبرة المطلوبة:</label>
+    <div class="tones">
+        <button class="tone-btn active" onclick="setTone('احترافي ورسمي', this)">احترافي ورسمي</button>
+        <button class="
